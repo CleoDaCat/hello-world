@@ -1,0 +1,12 @@
+As thedaian mentioned in his comment, converting the magenta pixels to transparent in JavaScript is going to be slow. You should convert your images to a suitable format beforehand.
+
+ImageMagick can be really useful for this kind of tasks. Converting your tile with magenta background to an image with transparency is as simple as this:
+
+convert myOpaqueTile.png -transparent "#FF00FF" myTransparentTile.png
+This will convert your file with magenta background (myOpaqueTile.png) to a file with a transparent background (will be saved as myTransparentTile.png).
+
+Of course you could also use Photoshop, GIMP or something like Paint.NET for this.
+
+
+
+magick convert Armor.png -transparent "476c6c" myTransparentTile.png
